@@ -2,6 +2,10 @@ h1{
   text-align: center;
 }
 
+.block{
+  display: block;
+}
+
 .results{
   display: none;
 }
