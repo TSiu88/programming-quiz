@@ -16,6 +16,7 @@ function tallyResults(program, learning, company, flexibility, partner){
   });
 
   var countArray = [jsCount, rbyCount, pytCount];
+
   return countArray;
 }
 
@@ -25,59 +26,39 @@ function highestCount(array){
   var highCount = array[0];
   var highIndex = 0;
   var duplicateCount = array[0];
-  var duplicateIndex = [];
+  var duplicateIndex = [0];
+  var duplicateFound = false;
 
   for(var i=1; i<array.length; i++){
     if(array[i] === highCount){
       
-      if(duplicateCount < highCount){
-        duplicateIndex.empty();
+      if(duplicateCount < highCount && duplicateFound === true){
+        duplicateIndex.length = 0;
       }
+      duplicateFound = true;
       duplicateCount = array[i];
       duplicateIndex.push(i);
     }
     else if(array[i] > highCount){
       highIndex = i;
       highCount = array[i];
+      if(duplicateFound === false){
+        duplicateIndex.length = 0;
+        duplicateCount = i;
+        duplicateIndex.push(highIndex);
+      }
     }
   }
 
-  if(!duplicateIndex.isEmpty()){
-    duplicateIndex
+  if(duplicateCount === highCount){
+    var randomPick = randomizedResult(duplicateIndex.length);
+    choice = convertToResult(duplicateIndex[randomPick]);
+  }
+  else{
+    choice = convertToResult(highIndex);
   }
 
-  // //js > rby
-  // if(array[0] > array[1]){
-  //   //js > (rby && pyt)
-  //   if(array[0]> array[2]){
-  //     choice = "javascript";
-  //   }
-  //   //js === pyt
-  //   else if (array[0] === array[2]){
-  //     var randomPick = randomizedResult();
-  //     if (randomPick === 0){
-  //       choice = "javascript";
-  //     } else{
-  //       choice = "python";
-  //     }
-  //   }
-  //   else{
-  //     choice = "python";
-  //   }
-  // }else if(array[0] == array[1]){
-
-  // }
-
-
-  // if(array[0] > array[1] && array[0] > array[2]){
-  //   choice = "javascript";
-  // }
-  // else if(array[1] > array[0] && array[1] > array[2]){
-  //   choice = "ruby";
-  // }
-  // else if(array[2] > array[0] && array[2] > array[1]){
-  //   choice = "python";
-  // }
+  return choice;
 
 }
 
@@ -95,8 +76,8 @@ function convertToResult(index){
   return resultTag;
 }
 
-function randomizedResult(){
-  return Math.getRandomInt(2);
+function randomizedResult(length){
+  return Math.floor(Math.random() * length);
 }
 
 //Front-end logic
@@ -108,12 +89,6 @@ $(document).ready(function () {
     var companyInput = $("input:radio[name=companyType]:checked").val();
     var flexibilityInput = $("input:radio[name=flexibility]:checked").val();
     var partnerInput = $("input:radio[name=partner]:checked").val();
-    
-    var programPoints = convertToPoints(programInput);
-    var learningPoints = convertToPoints(learningInput);
-    var companyPoints = convertToPoints(companyInput);
-    var flexibilityPoints = convertToPoints(flexibilityInput);
-    var partnerPoints = convertToPoints(partnerInput);
 
     console.log(programInput);
     console.log(learningInput);
@@ -125,7 +100,11 @@ $(document).ready(function () {
 
     console.log(counts);
 
-    var result = highestCount(counts);
+    var result = "#" + highestCount(counts);
+
+    console.log("result " + result);
+
+    $(result).show();
 
     event.preventDefault();
   })
