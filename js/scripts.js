@@ -22,44 +22,77 @@ function tallyResults(program, learning, company, flexibility, partner){
 function highestCount(array){
   var choice;
 
-  //js > rby
-  if(array[0] > array[1]){
-    //js > (rby && pyt)
-    if(array[0]> array[2]){
-      choice = "javascript";
-    }
-    //js === pyt
-    else if (array[0] === array[2]){
-      var randomPick = randomizedResult();
-      if (randomPick === 0){
-        choice = "javascript";
-      } else{
-        choice = "python";
-      }
-    }
-    else{
-      choice = "python";
-    }
-  }else if(array[0] == array[1]){
+  var highCount = array[0];
+  var highIndex = 0;
+  var duplicateCount = array[0];
+  var duplicateIndex = [];
 
+  for(var i=1; i<array.length; i++){
+    if(array[i] === highCount){
+      
+      if(duplicateCount < highCount){
+        duplicateIndex.empty();
+      }
+      duplicateCount = array[i];
+      duplicateIndex.push(i);
+    }
+    else if(array[i] > highCount){
+      highIndex = i;
+      highCount = array[i];
+    }
   }
 
-  
+  if(!duplicateIndex.isEmpty()){
+    duplicateIndex
+  }
+
+  // //js > rby
+  // if(array[0] > array[1]){
+  //   //js > (rby && pyt)
+  //   if(array[0]> array[2]){
+  //     choice = "javascript";
+  //   }
+  //   //js === pyt
+  //   else if (array[0] === array[2]){
+  //     var randomPick = randomizedResult();
+  //     if (randomPick === 0){
+  //       choice = "javascript";
+  //     } else{
+  //       choice = "python";
+  //     }
+  //   }
+  //   else{
+  //     choice = "python";
+  //   }
+  // }else if(array[0] == array[1]){
+
+  // }
+
+
+  // if(array[0] > array[1] && array[0] > array[2]){
+  //   choice = "javascript";
+  // }
+  // else if(array[1] > array[0] && array[1] > array[2]){
+  //   choice = "ruby";
+  // }
+  // else if(array[2] > array[0] && array[2] > array[1]){
+  //   choice = "python";
+  // }
 
 }
 
-function convertToPoints(input){
-  var points;
-  if(input === "js"){
-    points = 1;
+function convertToResult(index){
+  var resultTag;
+  if(index === 0){
+    resultTag = "javascript";
   }
-  else if(input === "rby"){
-    points = 2;
+  else if(index === 1){
+    resultTag = "ruby";
   }
-  else if(input === "pyt"){
-    points = 3;
+  else if(index === 2){
+    resultTag = "python";
   }
-  return points;
+  return resultTag;
 }
 
 function randomizedResult(){
