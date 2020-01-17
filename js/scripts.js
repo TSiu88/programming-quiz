@@ -1,4 +1,6 @@
 //Back-end logic
+
+//Count each answer for each programming language into array
 function tallyResults(program, learning, company, flexibility, partner){
   var jsCount = 0;
   var rbyCount = 0;
@@ -20,6 +22,7 @@ function tallyResults(program, learning, company, flexibility, partner){
   return countArray;
 }
 
+//Find highest count in choices for a language, randomize btwn highest if tied
 function highestCount(array){
   var choice;
 
@@ -59,9 +62,9 @@ function highestCount(array){
   }
 
   return choice;
-
 }
 
+//Convert random number to one of tied language results
 function convertToResult(index){
   var resultTag;
   if(index === 0){
@@ -76,6 +79,7 @@ function convertToResult(index){
   return resultTag;
 }
 
+//Get randomized index number for array of duplicated indexes
 function randomizedResult(length){
   return Math.floor(Math.random() * length);
 }
@@ -90,19 +94,11 @@ $(document).ready(function () {
     var flexibilityInput = $("input:radio[name=flexibility]:checked").val();
     var partnerInput = $("input:radio[name=partner]:checked").val();
 
-    console.log(programInput);
-    console.log(learningInput);
-    console.log(companyInput);
-    console.log(flexibilityInput);
-    console.log(partnerInput);
-
     var counts = tallyResults(programInput, learningInput, companyInput, flexibilityInput, partnerInput);
 
     console.log(counts);
 
     var result = highestCount(counts);
-
-    console.log("result " + result);
 
     $(".results").show();
 

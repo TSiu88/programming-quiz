@@ -1,11 +1,62 @@
+body{
+  background-color: #708090;
+}
 h1{
   text-align: center;
+  text-shadow: black 1px 1px;
+  
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #009e73;
+}
+
+h2{
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #009e73;
+}
+
+h3{
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h4{
+  font-style: italic;
+  font-family: cursive;
+}
+
+img{
+  height: 300px;
+  margin-bottom: 15px;
+}
+
+li{
+  font-style: italic;
+}
+
+.container{
+  background-color: #99aab5;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.heading p{
+  font-style: italic;
+  font-size: 16px;
 }
 
 .block{
   display: block;
 }
 
+.quiz{
+  margin-left: 30px;
+}
+
 .results{
   display: none;
+}
+
+.results p{
+  font-size: 16px;
 }

@@ -6,34 +6,33 @@
 
 ## Description
 
-_This site is the Week 2 Friday independent assignment for Epicodus' full time Intro to Programming and C#/React course._
-
-_Detailed desc w/ purpose/usage, what does, motivation to create, why exists, other info for users/developers to have_
+_This site is the Week 2 Friday independent assignment for Epicodus' full time Intro to Programming and C#/React course.  It has a quiz on which coding language someone should learn first and then calculates a result depending on the input provided.  The calculation for which result to show is from how many times an answer corresponding to a specific result is chosen.  If there was a tie between two results, a random result between them would be chosen and displayed._
 
 ## Screenshots
 _{Show pictures using ![alt text](image.jpg), show what library does as concisely as possible but don't need to explain how project solves problem from `code`_
 
 ## Setup/Installation Requirements
 
-* _Go to the GitHub Pages site at:_
-* _tsiu88.github.io/portfolio-landing_
-* _or clone repository from Github_
-* _Open portfolio-landing.html file in browser_
+### Requirements to Run
+* _Web Browser_
 
-_Other things need to run like servers, databases, code, how to install and use program_
+### Other Resources Used
+* _JQuery_
+* _Bootstrap_
+
+_This page may be viewed by cloning the repository from GitHub and opening the index.html file in any web browser._
 
 ## Technologies Used
 
 * _HTML_
 * _CSS_
-* _Markdown_
+* _Javascript_
+* _JQuery_
 * _Bootstrap_
+* _Markdown_
 
 ## Notable Features
-_features that make project stand out_
-
-## Test Case Example
-_describe and show how to run tests with `code` examples}_
+_Although it was not covered in class yet, the calculations for determining the result to display uses loops to find which answer was picked the most.  The calculations also account for if there is a tie between multiple results and uses a randomizer to chose between the results that are currently in a tie._
 
 ## Known Bugs
 
@@ -41,7 +40,7 @@ _There are currently no known bugs in this program_
 
 ## Support and contact details
 
-_If there are any question or concerns please contact me at my email._
+_If there are any question or concerns please contact me at my [email](mailto:tsiu88@gmail.com). Thank you._
 
 ### License
 
