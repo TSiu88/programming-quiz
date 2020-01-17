@@ -100,11 +100,25 @@ $(document).ready(function () {
 
     console.log(counts);
 
-    var result = "#" + highestCount(counts);
+    var result = highestCount(counts);
 
     console.log("result " + result);
 
-    $(result).show();
+    $(".results").show();
+
+    if(result === "javascript"){
+      $("#javascript").show();
+      $("#ruby").hide();
+      $("#python").hide();
+    }else if(result === "ruby"){
+      $("#javascript").hide();
+      $("#ruby").show();
+      $("#python").hide();
+    }else if(result === "python"){
+      $("#javascript").hide();
+      $("#ruby").hide();
+      $("#python").show();
+    }
 
     event.preventDefault();
   })
