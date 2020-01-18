@@ -97,8 +97,6 @@ $(document).ready(function () {
 
     var counts = tallyResults(programInput, learningInput, companyInput, flexibilityInput, partnerInput);
 
-    console.log(counts);
-
     var result = highestCount(counts);
 
     var greeting = "";
