@@ -18,6 +18,12 @@
 
       <div class="quiz">
         <form class="inputs">
+
+          <div class="form-group">
+            <label for="name">Your Name (optional):</label>
+            <input id="name" class="form-control" type="text">
+          </div>
+
           <!--Question 1-->
           <div class="form-group">
             <label for="programType">Question 1:</label>
@@ -128,11 +134,11 @@
       </div> <!--End of quiz-->
 
       <div class="results">
-        <h2>You should start with:</h2>
+        <h2><span class="nameInsert"></span> You should start with:</h2>
 
         <div id="javascript">
           <h3>Javascript</h3>
-          <img src="img/javascript.png" alt="Javascript Logo" title="javascript">
+          <img src="img/javascript.png" alt="Javascript Logo" title="javascript" class="logo">
           <p>Javascript is a language that gives websites life by making them interactive, dynamic, and interesting to use.  It can be used to program both front and back-end, however is mainly used for designing websites and apps.  It is a very popular and powerful language and can be used in all browsers.</p>
           <h4>Other Features:</h4>
           <ul>
@@ -148,7 +154,7 @@
 
         <div id="ruby">
           <h3>Ruby</h3>
-          <img src="img/ruby.jpg" alt="Ruby Logo" title="ruby">
+          <img src="img/ruby.jpg" alt="Ruby Logo" title="ruby" class="logo">
           <p>Ruby is a back-end language that is used for web development and other functional programming.  It is fun and creative in code but still gets the job done concisely. It can be used to build web apps quickly in fewer lines of code.</p>
           <h4>Other Features:</h4>
           <ul>
@@ -164,7 +170,7 @@
 
         <div id="python">
           <h3>Python</h3>
-          <img src="img/python.jpg" alt="Python Logo" title="python">
+          <img src="img/python.jpg" alt="Python Logo" title="python" class="logo">
           <p>Python is a very versatile language with many applications in different areas such as data analysis, web applications, game development, and information security.  It is one of the most beginner-friendly languages to learn with a clean, intuitive structure that reads almost like English.  </p>
           <h4>Other Features:</h4>
           <ul>

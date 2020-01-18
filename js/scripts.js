@@ -88,6 +88,7 @@ function randomizedResult(length){
 $(document).ready(function () {
   $(".inputs").submit(function (event) {
     
+    var nameInput = $("#name").val();
     var programInput = $("input:radio[name=programType]:checked").val();
     var learningInput = $("input:radio[name=learningEase]:checked").val();
     var companyInput = $("input:radio[name=companyType]:checked").val();
@@ -99,21 +100,33 @@ $(document).ready(function () {
     console.log(counts);
 
     var result = highestCount(counts);
+    var greeting = "";
+    if(nameInput !== ""){
+      $(".nameInsert").text("");
+      greeting = "Hi " + nameInput + ", ";
+    }
+    
+
+    $(".nameInsert").append(greeting);
 
     $(".results").show();
+    $("#ruby").hide();
+    $("#python").hide();
+    $("#javascript").hide();
+    $(".logo").hide();
 
     if(result === "javascript"){
+      $(".logo").hide();
       $("#javascript").show();
-      $("#ruby").hide();
-      $("#python").hide();
+      $(".logo").fadeIn("slow");
     }else if(result === "ruby"){
-      $("#javascript").hide();
+      $(".logo").hide();
       $("#ruby").show();
-      $("#python").hide();
+      $(".logo").fadeIn("slow");
     }else if(result === "python"){
-      $("#javascript").hide();
-      $("#ruby").hide();
+      $(".logo").hide();
       $("#python").show();
+      $(".logo").fadeIn("slow");
     }
 
     event.preventDefault();
