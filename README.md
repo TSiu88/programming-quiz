@@ -6,7 +6,7 @@
 
 ## Description
 
-_This site is the Week 2 Friday independent assignment for Epicodus' full time Intro to Programming and C#/React course.  It has a quiz on which coding language someone should learn first and then calculates a result depending on the input provided.  The calculation for which result to show is from how many times an answer corresponding to a specific result is chosen.  If there was a tie between two results, a random result between them would be chosen and displayed._
+_This site is the Week 2 Friday independent assignment for Epicodus' full time Intro to Programming and C#/React course.  It has a quiz to suggest which coding language someone should learn first and then calculates a result depending on the input provided.  The calculation for which result to show is from how many times an answer corresponding to a specific result is chosen.  If there was a tie between two results, a random result between them would be chosen and displayed.  The site also asks for a name (which is optional) and displays a personal greeting in the results if the field is filled or just leaves a generic heading if it is not._
 
 ## Setup/Installation Requirements
 
@@ -17,7 +17,7 @@ _This site is the Week 2 Friday independent assignment for Epicodus' full time I
 * _JQuery_
 * _Bootstrap_
 
-_This page may be viewed by cloning the repository from GitHub and opening the index.html file in any web browser._
+_This page may be viewed by cloning the [repository](https://github.com/TSiu88/programming-quiz.git) from my [GitHub page](https://github.com/TSiu88) and opening the index.html file in any web browser._
 
 ## Technologies Used
 
@@ -37,7 +37,7 @@ _Here is a snippet of what the quiz looks like:_
 
 ![questions](img/screenshot2.png)
 
-_Here is what the results look like:_
+_Here is a preview of what the results look like:_
 
 ![result](img/screenshot1.png)
 
