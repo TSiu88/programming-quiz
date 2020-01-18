@@ -76,6 +76,10 @@ li{
   font-size: 16px;
 }
 
+.form-group:nth-child(even){
+  background-color: #b8b8b8;
+}
+
 #javascript{
   background-color: #f1f2c9;
   padding: 10px 10px 10px 10px;
