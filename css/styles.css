@@ -36,8 +36,10 @@ li{
 
 .container{
   background-color: #99aab5;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-right: 30px;
+  padding-left: 15px;
 }
 
 .heading p{
@@ -46,11 +48,13 @@ li{
 }
 
 .btn{
-  margin-bottom: 15px;
+  border-width: 2px;
 }
 
 .well{
   padding-top: 10px;
+  border: solid 2px black;
+  margin-left: 15px;
 }
 
 .block{
@@ -59,6 +63,9 @@ li{
 
 .quiz{
   margin-left: 30px;
+  background-color: #cbd1d1;
+  padding: 30px 30px 30px 30px;
+  margin-bottom: 30px;
 }
 
 .results{
@@ -72,14 +79,20 @@ li{
 #javascript{
   background-color: #f1f2c9;
   padding: 10px 10px 10px 10px;
+  border: solid #dadbb6 2px;
+  border-radius: 5px;
 }
 
 #ruby{
   background-color: #edc0cd;
   padding: 10px 10px 10px 10px;
+  border: solid #deb4c0 2px;
+  border-radius: 5px;
 }
 
 #python{
   background-color:#c2e9ed;
   padding: 10px 10px 10px 10px;
+  border: solid #b8dfe3 2px;
+  border-radius: 5px;
 }
