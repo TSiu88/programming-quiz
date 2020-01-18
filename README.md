@@ -8,9 +8,6 @@
 
 _This site is the Week 2 Friday independent assignment for Epicodus' full time Intro to Programming and C#/React course.  It has a quiz on which coding language someone should learn first and then calculates a result depending on the input provided.  The calculation for which result to show is from how many times an answer corresponding to a specific result is chosen.  If there was a tie between two results, a random result between them would be chosen and displayed._
 
-## Screenshots
-_{Show pictures using ![alt text](image.jpg), show what library does as concisely as possible but don't need to explain how project solves problem from `code`_
-
 ## Setup/Installation Requirements
 
 ### Requirements to Run
@@ -33,6 +30,16 @@ _This page may be viewed by cloning the repository from GitHub and opening the i
 
 ## Notable Features
 _Although it was not covered in class yet, the calculations for determining the result to display uses loops to find which answer was picked the most.  The calculations also account for if there is a tie between multiple results and uses a randomizer to chose between the results that are currently in a tie._
+
+## Screenshots
+
+_Here is a snippet of what the quiz looks like:_
+
+![questions](img/screenshot2.png)
+
+_Here is what the results look like:_
+
+![result](img/screenshot1.png)
 
 ## Known Bugs
 

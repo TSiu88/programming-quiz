@@ -100,12 +100,12 @@ $(document).ready(function () {
     console.log(counts);
 
     var result = highestCount(counts);
+
     var greeting = "";
+    $(".nameInsert").text("");
     if(nameInput !== ""){
-      $(".nameInsert").text("");
       greeting = "Hi " + nameInput + ", ";
     }
-    
 
     $(".nameInsert").append(greeting);
 
